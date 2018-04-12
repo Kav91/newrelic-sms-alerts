@@ -1,0 +1,24 @@
+{
+  "name": "newrelic-sms-alerts",
+  "version": "1.0.0",
+  "description": "New Relic SMS Alerts with Serverless",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "newrelic",
+    "sms",
+    "aws",
+    "serverless",
+    "lambda",
+    "sns",
+    "api",
+    "gateway"
+  ],
+  "author": "Kavashen Pather",
+  "license": "ISC",
+  "dependencies": {
+    "pino": "^4.16.1"
+  }
+}
