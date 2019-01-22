@@ -26,7 +26,12 @@ module.exports.handler = (event, context, callback) => {
 
   if(checkAlert(data.severity, data.current_state, data.event_type)){
 
-    let promises = numbers.map((number) => {
+    let callNumbers = numbers.default
+    if(numbers[data.policy_name] != undefined){
+        callNumbers = numbers[data.policy_name]
+    }
+
+    let promises = callNumbers.map((number) => {
         let msg = `${data.condition_name} - ${data.details}\n`;
             msg += `${data.severity} - ${data.current_state}\n`;
             msg += `${data.event_type} - ${data.policy_name}\n`;
